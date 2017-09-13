@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko" class="">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+	<title></title>	
+	<link rel="stylesheet" href="http://ir.focus.kr/img/wd/plugin/ripple/css/lv-ripple.css?version=1.0.7">
+	<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.4.min.js"></script>
+	<script src="http://ir.focus.kr/img/wd/plugin/ripple/js/lv-ripple.jquery.js"></script>
+	<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/assets/owl.theme.default.min.css">
+	<script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>	
+	<style>
+	body{margin:0px}
+	</style>
+</head>
+<body style="background-image:url(./img/bg_pattern.jpg)">
+	<div style="max-width:700px;margin:auto;position:relative;border:1px solid #cdcdcd;margin:10px;">
+		<div class="owl-carousel owl-theme" >
+			<div class="item">
+			  <img src="./img/page_1.png"/>
+			</div>
+			<div class="item">
+				<div style="position:relative">
+					<img src="./img/page_2.png" style="width:100%"/>
+					<div style="position:absolute;z-index:99999;top:58%">
+						<p style="margin:auto;width:90%;text-align:center;font-size:80%;">
+							캐논에서는 한국 사진학계의 발전과 우수 사진 문화 정착을 위해 2개의 대표적인 사회공헌 프로그램을 운영하고 있습니다.
+						</p>
+						<p style="margin:20px auto;width:90%;text-align:center;font-size:80%;">
+							지금부터 어떤 프로그램이 있는지 함께 알아볼까요?
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<div class="item">
+			 <img src="./img/page_3.png"/>
+			</div>
+			<div class="item">
+				<div style="position:relative;">
+					<img src="./img/page_last.png" style="width:100%;margin:auto;"/>
+					<div style="position:absolute;z-index:99999;top:52%">
+						<p style="margin:auto;width:90%;text-align:center;font-size:100%;">
+							캐논에 보내주신 성원과 관심에 보답하는 마음으로 앞으로도 꾸준히 사회공헌활동에 앞장서겠습니다.
+						</p>	
+										
+					</div>
+					
+					<a href="/content/finishWish/">
+						<div style="margin: 0px 10%;position:absolute;left:0;right:0;bottom:12.5%;background-color:RGB(255,192,0);padding:10px 0px;text-align:center;">스탬프 받기</div>		
+					</a>
+					
+				</div>
+			</div>
+				
+		</div>
+		<div class="owl-theme custom_dots" style="position:absolute;bottom:4.5%;z-index:99999;left:0;right:0;">
+			<div class="owl-dots">
+
+			</div>
+		</div>
+	</div>
+	<style>
+		.owl-carousel .owl-dots{display:none;}
+		.owl-theme .owl-dots .owl-dot.active span {background:RGB(251,0,31);}
+		.owl-theme .owl-dots .owl-dot:hover span{background:white;}
+		.owl-theme .owl-dots .owl-dot span{background:white;}
+		.owl-theme .owl-dots .owl-dot span{margin:5px 3px;}
+		
+		
+	</style>
+	<script>
+	var obj;
+	$(document).ready(function(){
+		
+	
+		obj = $('.owl-carousel').owlCarousel({
+			loop:false,
+			margin:10,
+			nav:false,
+			items:1,
+			dots:true,
+			autoHeight:true,
+			touchDrag  : true,
+			mouseDrag  : true,
+			onTranslated:function(){
+				var idx =$(".owl-carousel .owl-dot.active").index();
+				$(".custom_dots").find(".owl-dot").removeClass("active");
+				$(".custom_dots .owl-dot:eq("+idx+")").addClass("active");
+			},
+			onInitialized :function(){
+				var max =$(".owl-carousel .owl-dot").length;
+				for(var i=0;i<max;i++){
+					$(".owl-theme .owl-dots").append('<div class="owl-dot"><span></span></div>');
+				}
+				$(".custom_dots .owl-dot:eq(0)").addClass("active");
+				
+				//cnt_call++;
+				//setTimeout(checkTime, 1000);
+			
+				
+			}
+		})
+	});
+	//추후 사용 (카운트 3초)
+	/*var cnt_call=1; //
+	var is_Enable=false;
+	function checkTime(){		
+		if(cnt_call<3)
+		{
+			cnt_call++;
+			setTimeout(checkTime, 1000);
+		}
+		else{
+			
+			
+			
+		}
+		
+	 }*/
+	</script>
+</body>
+</html>

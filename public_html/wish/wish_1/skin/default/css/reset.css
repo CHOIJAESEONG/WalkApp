@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+/* CSS reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:12px;
+	vertical-align:baseline;
+	background:transparent;
+	-webkit-text-size-adjust:none;
+	font-family:'Noto Sans KR', 'Dotum', 'Gulim', 'Arial', sans-serif;
+	list-style:none;
+	line-height:1;
+}
+
+em,address{font-style:normal;}
+hr{display:none}
+body{line-height:1;word-break: break-all;}
+ol, ul{list-style:none;}
+blockquote, q{quotes: none;}
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none;}
+
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+table{width:100%;border-collapse:collapse;border-spacing:0;table-layout:fixed;word-break:break-all;}
+table th, table td{vertical-align:middle;}
+fieldset{margin:0;padding:0;border:0 none;}
+legend, caption, .skip{position:absolute; left:-9999px; width:0; height:0; font-size:0; line-height:0; overflow:hidden;}
+caption{position:static;}
+
+html, body,input,button,textarea{font-size:12px; color:#888; font-family:'Noto Sans KR', 'Dotum', 'Gulim', 'Arial', sans-serif;}
+
+a {color:#a7a7a7; text-decoration:none;}
+a:hover {color:#a7a7a7; text-decoration:none;}
+img,input{vertical-align:top;}
+label{vertical-align:middle; font-size:14px; cursor:pointer;}
+select {height:24px; margin:0; border: 1px solid #dcdcdc; padding:0; font-size:13px; vertical-align:middle; color:#666;  cursor:pointer;}
+textarea {border:1px solid #dcdcdc; color:#888; font-size:13px; line-height:18px; padding:5px; overflow-y:auto; resize:none;-webkit-appearance:none; border-radius:0; font-weight:400;}
+
+h1,h2,h3,h4,h5,h6,th,strong {font-weight:600;}
+select {font-family:'Noto Sans KR', 'Dotum', 'Gulim', 'Arial', sans-serif;}
+
+/* html5 reset */
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption, canvas{display:block; margin:0; padding:0; border:0; font-size:100%; font:inherit; vertical-align:baseline;}
+input {-webkit-appearance:none; -webkit-text-size-adjust:none; border-radius:0; }
+input[type='text'] {-webkit-appearance:none; padding:0; border:1px solid #ddd; color:#aaa;}
+
+/* skip */
+a.skipNavi{position:absolute; display:block; width:100%; left:0; text-align:center; top:-10000px; z-index:500; font-size:1.3em;}
+a.skipNavi:hover, a.skipNavi:focus, a.skipNavi:active{position:absolute; top:0; padding:15px 0; font-weight:bold; color:#fff; background:#1d60a7; z-index:500;}
+
+
